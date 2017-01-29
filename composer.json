@@ -1,0 +1,26 @@
+{
+    "name": "konsulting/laravel-extend-collections",
+    "description": "A few extensions to the Laravel Collection and Arr.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Keoghan Litchfield",
+            "email": "keoghan@klever.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^5.6 | ^7.0",
+        "tightenco/collect": "^5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Konsulting\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": ["tests"]
+    }
+}
