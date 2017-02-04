@@ -4,7 +4,7 @@ namespace Konsulting\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
-class CollectionServiceProvider extends ServiceProvider
+class CollectionsServiceProvider extends ServiceProvider
 {
     public function register()
     {
