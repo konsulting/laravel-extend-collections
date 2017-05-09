@@ -25,6 +25,7 @@ if (! Arr::hasMacro('fromDot')) {
 
             $array = array_reduce(array_keys($array), function ($carry, $key) use ($array, $partPath, $zeroPath) {
                 $carry[str_replace($partPath, $zeroPath, $key)] = $array[$key];
+
                 return $carry;
             });
         }
