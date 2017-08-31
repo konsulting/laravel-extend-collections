@@ -23,5 +23,12 @@
     },
     "autoload-dev": {
         "classmap": ["tests"]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Konsulting\\Laravel\\CollectionServiceProvider"
+            ]
+        }
     }
 }

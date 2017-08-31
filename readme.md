@@ -7,14 +7,16 @@
 `composer require konsulting/laravel-extend-collections`
 
 ### Using Laravel
-Add the `CollectionsServiceProvider` to your `config/app.php`. 
+If you are using Laravel 5.5, this package will auto-register the service provider.
+However, if you have chosen not to auto-register, or are using an earlier version,
+add the `CollectionsServiceProvider` to your `config/app.php`.
 
 ```php
 'providers' => [
     // Other service providers...
-    
+
     Konsulting\Laravel\CollectionsServiceProvider::class,
-],	
+],
 ```
 
 ### Not using Laravel
@@ -40,7 +42,7 @@ There is a simple namespaced helper function to assist with extending Collection
 
 ## Contributing
 
-Contributions are welcome and will be fully credited. We will accept contributions by Pull Request. 
+Contributions are welcome and will be fully credited. We will accept contributions by Pull Request.
 
 Please:
 
