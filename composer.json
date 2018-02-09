@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Konsulting\\Laravel\\CollectionServiceProvider"
+                "Konsulting\\Laravel\\CollectionsServiceProvider"
             ]
         }
     }
