@@ -2,7 +2,7 @@
 
 namespace Konsulting\Laravel;
 
-class CollectionMacroTest extends \PHPUnit_Framework_TestCase
+class TestCollection extends \PHPUnit\Framework\TestCase
 {
     /** @test **/
     public function deep_trim()
