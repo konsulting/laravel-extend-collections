@@ -47,5 +47,7 @@ if (! Collection::hasMacro('dotHas')) {
 }
 
 if (! Collection::hasMacro('fromDot')) {
-    Collection::macro('fromDot', fn ($part = null) => new static(Arr::fromDot($this->all())));
+    Collection::macro('fromDot', function ($part = null) {
+        return new static(Arr::fromDot($this->all(), '.', $part));
+    });
 }

@@ -28,7 +28,7 @@ There is a simple namespaced helper function to assist with extending Collection
 * `dotSet` - set an item using dot-notation
 * `dotHas` - check if an item exists using dot-notation
 * `dot` - now standard in Laravel as `dot`.
-* `fromDot` - convert a dot-notation indexed collection to a nested collection - now standard in Laravel as `undot`. Kept for backwards compatibility.
+* `fromDot` - a little different to `undot` in Laravel.
 
 ## Contributing
 
