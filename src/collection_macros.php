@@ -4,11 +4,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
 if (! Collection::hasMacro('dropEmpty')) {
-    Collection::macro('dropEmpty', function () {
-        return $this->filter(function ($value) {
-            return ! (empty($value) || $value instanceof Collection && $value->isEmpty());
-        });
-    });
+    Collection::macro('dropEmpty', fn () => $this->filter(fn ($value) => ! (empty($value) || $value instanceof Collection && $value->isEmpty())));
 }
 
 if (! Collection::hasMacro('deep')) {
@@ -34,9 +30,7 @@ if (! Collection::hasMacro('deep')) {
 }
 
 if (! Collection::hasMacro('dotGet')) {
-    Collection::macro('dotGet', function ($key) {
-        return Arr::get($this, $key);
-    });
+    Collection::macro('dotGet', fn ($key) => Arr::get($this, $key));
 }
 
 if (! Collection::hasMacro('dotSet')) {
@@ -49,13 +43,9 @@ if (! Collection::hasMacro('dotSet')) {
 }
 
 if (! Collection::hasMacro('dotHas')) {
-    Collection::macro('dotHas', function ($key) {
-        return new static(Arr::has($this, $key));
-    });
+    Collection::macro('dotHas', fn ($key) => new static(Arr::has($this, $key)));
 }
 
 if (! Collection::hasMacro('fromDot')) {
-    Collection::macro('fromDot', function ($part = null) {
-        return new static(Arr::fromDot($this->all(), '.', $part));
-    });
+    Collection::macro('fromDot', fn ($part = null) => new static(Arr::fromDot($this->all())));
 }

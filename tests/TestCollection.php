@@ -12,15 +12,13 @@ class TestCollection extends TestCase
     {
         $collection = collect(['a' => ['a' => 'bab   '], 'b' => 'c   ']);
 
-        $result = $collection->deep('map', function ($item) {
-            return is_string($item) ? trim($item) : $item;
-        });
+        $result = $collection->deep('map', fn ($item) => is_string($item) ? trim($item) : $item);
 
         $this->assertEquals(['a' => ['a' => 'bab'], 'b' => 'c'], $result->all());
     }
 
     #[Test]
-    public function deep_dropEmpty()
+    public function deep_drop_empty()
     {
         $collection = collect(['a' => ['a' => '']]);
 
