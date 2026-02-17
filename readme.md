@@ -7,17 +7,7 @@
 `composer require konsulting/laravel-extend-collections`
 
 ### Using Laravel
-If you are using Laravel 5.5, this package will auto-register the service provider.
-However, if you have chosen not to auto-register, or are using an earlier version,
-add the `CollectionsServiceProvider` to your `config/app.php`.
-
-```php
-'providers' => [
-    // Other service providers...
-
-    Konsulting\Laravel\CollectionsServiceProvider::class,
-],
-```
+This package will auto-register the service provider.
 
 ### Not using Laravel
 There is a simple namespaced helper function to assist with extending Collection and Arr.
@@ -37,8 +27,8 @@ There is a simple namespaced helper function to assist with extending Collection
 * `dotGet` - retrieve an item using dot-notation
 * `dotSet` - set an item using dot-notation
 * `dotHas` - check if an item exists using dot-notation
-* `dot` - convert a nested collection to dot-notation indexed collection
-* `fromDot` - convert a dot-notation indexed collection to a nested collection
+* `dot` - now standard in Laravel as `dot`.
+* `fromDot` - convert a dot-notation indexed collection to a nested collection - now standard in Laravel as `undot`. Kept for backwards compatibility.
 
 ## Contributing
 

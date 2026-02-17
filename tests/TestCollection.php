@@ -2,9 +2,12 @@
 
 namespace Konsulting\Laravel;
 
-class TestCollection extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\TestCase;
+
+class TestCollection extends TestCase
 {
-    /** @test **/
+    #[Test]
     public function deep_trim()
     {
         $collection = collect(['a' => ['a' => 'bab   '], 'b' => 'c   ']);
@@ -16,7 +19,7 @@ class TestCollection extends \PHPUnit\Framework\TestCase
         $this->assertEquals(['a' => ['a' => 'bab'], 'b' => 'c'], $result->all());
     }
 
-    /** @test **/
+    #[Test]
     public function deep_dropEmpty()
     {
         $collection = collect(['a' => ['a' => '']]);
@@ -26,7 +29,7 @@ class TestCollection extends \PHPUnit\Framework\TestCase
         $this->assertTrue($result->isEmpty());
     }
 
-    /** @test **/
+    #[Test]
     public function dot()
     {
         $collection = collect(['a' => ['a' => ''], 'b' => ['c' => ['d' => 1, 'e' => 2]]]);
@@ -36,7 +39,7 @@ class TestCollection extends \PHPUnit\Framework\TestCase
         $this->assertEquals(['a.a' => '', 'b.c.d' => 1, 'b.c.e' => 2], $result->all());
     }
 
-    /** @test */
+    #[Test]
     public function from_dot()
     {
         $collection = collect(['a.a' => '', 'b.c.d' => 1, 'b.c.e' => 2]);

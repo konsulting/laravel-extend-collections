@@ -54,12 +54,6 @@ if (! Collection::hasMacro('dotHas')) {
     });
 }
 
-if (! Collection::hasMacro('dot')) {
-    Collection::macro('dot', function ($prefix = '') {
-        return new static(Arr::dot($this->all(), $prefix));
-    });
-}
-
 if (! Collection::hasMacro('fromDot')) {
     Collection::macro('fromDot', function ($part = null) {
         return new static(Arr::fromDot($this->all(), '.', $part));
